@@ -7,19 +7,19 @@ set splitright
 set mouse=
 set guicursor=
 set incsearch         " 入力途中でも検索がおこなわれるようにする
-" set laststatus=2
 set cmdheight=2
 set hlsearch          " 文字列検索のハイライト
 set backspace=indent,eol,start " バックスペースキーで削除
-"set showtabline=2     " タブ毎に常にタブラインを表示
 set noswapfile
 set cursorline
-"set cursorcolumn
-"colorscheme noctis_azureus
+
+" ターミナルを開いたらに常にinsertモードに入る
+autocmd TermOpen * :startinsert
+" ターミナルモードで行番号を非表示
+autocmd TermOpen * setlocal norelativenumber
+autocmd TermOpen * setlocal nonumber
 
 " vim/airlineプラグイン用
-nmap <C-p> <Plug>AirlineSelectPrevTab
-nmap <C-n> <Plug>AirlineSelectNextTab
 let g:airline_theme = 'powerlineish'           " テーマの指定
 let g:airline#extensions#tabline#enabled = 1 " タブラインを表示
 let g:airline#extensions#tabline#buffer_idx_mode = 1 " bufferの番号表示
@@ -37,22 +37,8 @@ let g:airline#extensions#tabline#buffer_idx_format = {
 	\ '9': '9 '
 	\}
 
-imap jk <ESC>
-" 行内でもj,kで移動可能
-nmap j gj
-nmap <Down> gj
-nmap k gk
-nmap <Up> gk
-" F3でハイライトを消す
-nmap <silent> <F3> :<C-u>nohlsearch<CR><Esc>
-" <Leader>にSpaceキー割り当て
-let mapleader = "\<Space>"
 " 隠しファイルを表示する
 let g:fern#default_hidden=1
-
-" ctrl+矢印キーでタブ移動
-nnoremap <silent> <C-Left> gT
-nnoremap <silent> <C-Right> gt
 
 highlight CocFloating ctermbg=237 guibg=#414141
 highlight CocFloatThumb  ctermbg=239 guibg=#585858

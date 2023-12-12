@@ -15,6 +15,24 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 repo = 'Mofiqul/dracula.nvim'
 
+# 言語ごとのシンタックス
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+
+# telescope.nvimが依存
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+# ファイル検索プラグイン
+#[[plugins]]
+#repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope-fzf-native.nvim'
+
 # コメントアウトを簡単にする
 # ビジュアルモード時に"?"を入力したら指定範囲がコメントアウト
 [[plugins]]

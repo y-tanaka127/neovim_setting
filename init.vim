@@ -14,13 +14,14 @@ endif
 
 " 初期設定
 runtime! base.vim
+runtime! key.vim
 
 "runtime! 
 " Set Dein base path (required)
-let s:dein_base = '/home/usp/.cache/dein'
+let s:dein_base = '/home/y-tanaka/.cache/dein'
 
 " Set Dein source path (required)
-let s:dein_src = '/home/usp/.cache/dein/repos/github.com/Shougo/dein.vim'
+let s:dein_src = '/home/y-tanaka/.cache/dein/repos/github.com/Shougo/dein.vim'
 
 " Set Dein runtime path (required)
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
@@ -54,3 +55,6 @@ endif
 if dein#check_install()
  call dein#install()
 endif
+
+set background="light"
+colorscheme dracula
